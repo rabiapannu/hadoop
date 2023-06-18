@@ -77,6 +77,7 @@ Write the following in the file and close it:<br/>
 sudo nano $HADOOP_HOME/etc/hadoop/hdfs-site.xml<br/>
 
 Write the following in the file and close it:<br/>
+```xml
 <configuration>
   <property>
     <name>dfs.replication</name>
@@ -91,12 +92,14 @@ Write the following in the file and close it:<br/>
     <value>file:///home/pannu/hadoopdata/hdfs/datanode</value>
   </property>
 </configuration>
+```
 
 ### 4e: Edit mapred-site.xml File
 
 sudo nano $HADOOP_HOME/etc/hadoop/mapred-site.xml<br/>
 
 Write the following in the file and close it:<br/>
+```xml
 <configuration> 
   <property> 
     <name>mapreduce.framework.name</name> 
@@ -115,18 +118,21 @@ Write the following in the file and close it:<br/>
     <value>HADOOP_MAPRED_HOME=${HADOOP_HOME}</value>
   </property>
 </configuration>
+```
 
 ### 4f: Edit yarn-site.xml File
 
 sudo nano $HADOOP_HOME/etc/hadoop/yarn-site.xml<br/>
 
 Write the following in the file and close it:<br/>
+```xml
 <configuration>
   <property>
     <name>yarn.nodemanager.aux-services</name>
     <value>mapreduce_shuffle</value>
   </property>
 </configuration>
+```
 
 ### 4g: Format HDFS NameNode
 
